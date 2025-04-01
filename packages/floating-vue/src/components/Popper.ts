@@ -1055,10 +1055,9 @@ if (typeof document !== 'undefined' && typeof window !== 'undefined') {
       : true
     document.addEventListener('touchstart', (event) => handleGlobalPointerDown(event, true), options)
     document.addEventListener('touchend', (event) => handleGlobalPointerUp(event, true), options)
-  } else {
-    window.addEventListener('mousedown', (event) => handleGlobalPointerDown(event, false), true)
-    window.addEventListener('click', (event) => handleGlobalPointerUp(event, false), true)
   }
+  window.addEventListener('mousedown', (event) => handleGlobalPointerDown(event, false), true)
+  window.addEventListener('click', (event) => handleGlobalPointerUp(event, false), true)
   window.addEventListener('resize', recomputeAllPoppers)
 }
 
